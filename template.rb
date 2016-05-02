@@ -96,11 +96,6 @@ production:
 
 CODE
 
-after_bundle do
-  git :init
-  git add: "."
-  git commit: %Q{ -m 'Initial commit' }
-end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -166,4 +161,6 @@ gem 'carrierwave_direct', :git => "git://github.com/dwilkie/carrierwave_direct.g
 rake('gems:install', :sudo => true)
 rake('db:sessions:create')
 rake('db:migrate')
-
+git :init
+git add: "."
+git commit: %Q{ -m 'Initial commit' }
