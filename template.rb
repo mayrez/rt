@@ -97,7 +97,7 @@ production:
 CODE
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -154,9 +154,7 @@ gem 'puma'
 gem 'mini_magick'
 gem "fog"
 gem 'carrierwave_direct', :git => "git://github.com/dwilkie/carrierwave_direct.git"
-#rails_command("bundle install")
-#rails_command("db:create")
-#rails_command("db:migrate")
+
 # Final install steps
 rake('gems:install', :sudo => true)
 rake('db:sessions:create')
